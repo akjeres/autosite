@@ -13,11 +13,17 @@
 		<section class="content_wrapper">
 			<div class="container">
 				<a class="logo" href="index.html">autosite.com</a>
+				<div class="burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
 				<ul class="nav-menu">
 					<li class="nav-menu-item active"><a href="index.html">Обмен</a></li>
 					<li class="nav-menu-item"><a href="feedback.html">Отзывы</a></li>
 					<li class="nav-menu-item"><a href="contacts.html">Контакты</a></li>
 				</ul>
+
 			</div>
 		</section>
 	</header>
@@ -30,41 +36,44 @@
 					</h2>
 					<ul class="pros-list">
 						<li class="pros-list-item">
-							В связи с большими колебаниями курса на <b>Ethereum</b>, возможны задержки в сети и сроки зачисления на кошелек могут возрасти!
+							<p>В связи с большими колебаниями курса на <b>Ethereum</b>, возможны задержки в сети и сроки зачисления на кошелек могут возрасти!</p>
 						</li>
 						<li class="pros-list-item">
-							Обмен  <b>QIWI-Bitcoin/Ethereum</b> происходит в автоматическом режиме <b>24/7</b> и занимает около <b>15-25</b> мин после оплаты!
+							<p>Обмен  <b>QIWI-Bitcoin/Ethereum</b> происходит в автоматическом режиме <b>24/7</b> и занимает около <b>15-25</b> мин после оплаты!</p>
 						</li>
 						<li class="pros-list-item">
-							Окончательная сумма выплаты <b>Ethereum</b>  будет уменьшена, чем та что в заявке на сумму комиссии внутри сети около <b>0.001-0.003 Eth ($1.35-3$)</b>
+							<p>Окончательная сумма выплаты <b>Ethereum</b>  будет уменьшена, чем та что в заявке на сумму комиссии внутри сети около <b>0.001-0.003 Eth ($1.35-3$)</b></p>
 						</li>
 					</ul>
 				</article>
+				<h2 class="calculator-title article-title">
+					Калькулятор валют
+				</h2>
 				<form class="calculator" id="calculator" method="post" action="">
-					<h2 class="calculator-title article-title">
-						Калькулятор валют
-					</h2>
-					<div class="calculator-block give">
-						<h3 class="calculator-block-title">
-							Вы отдаете
-						</h3>
-						<div class="give-logo"></div>
-						<div class="input-wrapper">
-							<input type="number" name="input-give" min="0" step="0.0001" placeholder="Введите сумму">
-							<div class="input-mask"></div>
+					<div class="calculator-fields">
+						<div class="calculator-block give">
+							<h3 class="calculator-block-title article-title">
+								Вы отдаете
+							</h3>
+							<div class="give-logo currency"></div>
+							<div class="input-wrapper">
+								<input type="number" name="input-give" min="0" max="999999.9999999" step="0.0000001" placeholder="Введите сумму" required>
+								<div class="input-mask"></div>
+							</div>
+						</div>
+						<div class="calculator-block take">
+							<h3 class="calculator-block-title article-title">
+								Вы получаете
+							</h3>
+							<div class="take-logo currency"></div>
+							<div class="input-wrapper">
+								<input type="number" name="input-take" min="0" step="0.0000001" placeholder="Введите сумму" readonly>
+								<div class="input-mask"></div>
+							</div>
 						</div>
 					</div>
-					<div class="calculator-block take">
-						<h3 class="calculator-block-title">
-							Вы получаете
-						</h3>
-						<div class="give-logo"></div>
-						<div class="input-wrapper">
-							<input type="number" name="input-take" min="0" step="0.0001" placeholder="Введите сумму" readonly>
-							<div class="input-mask"></div>
-						</div>
-					</div>
-					<input type="submit" value="Обменять" class="form-submit center">
+					<!--<input type="submit" value="Обменять" class="form-submit center">-->
+					<button type="submit" class="form-submit center">Обменять</button>
 				</form>
 				<article class="latest-feedback">
 					<h3 class="latest-feedback-title article-title">
@@ -100,8 +109,7 @@
 					<ul class="footer-links-list">
 						<li class="footer-links-item"><a href="index.html">Обмен</a></li>
 						<li class="footer-links-item"><a href="feedback.html">Отзывы</a></li>
-						<li class="footer-links-item"><a href="rules.html">Правила обмена</a></li>
-						<li class="footer-links-item"><a href="contscts.html">Контакты</a></li>
+						<li class="footer-links-item"><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</div>
 				<a class="email" href="mailto:autosite@gmail.com">autosite@gmail.com</a>

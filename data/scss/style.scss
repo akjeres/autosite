@@ -1,8 +1,61 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-RegularIt.woff');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
 html, body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 19px;
+  color: $black;
+}
+body {
+  overflow-x: hidden;
+}
+.container {
+  width: 1140px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 25px;
+  line-height: 29px;
+  margin: 45px 0 20px 0;
+  font-weight: bold;
+}
+.article-title, .article-title a {
+  font-size: 18px;
+  line-height: 21px;
+  color: $black;
+  font-weight: bold;
+}
+.article-title {
+  margin-bottom: 15px;
+}
+.article-title a {
+  @include link($black);
 }
 
 @import "header";
 @import "main";
 @import "footer";
+@import "media";

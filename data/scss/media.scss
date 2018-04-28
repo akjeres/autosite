@@ -1,0 +1,426 @@
+@import "variables";
+
+/*@media (min-width: 1170px) {
+  html.scroll {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+    footer {
+      width: 100vw;
+      position: relative;
+      right: calc(100vw - 100%);
+    }
+  }
+}*/
+
+@media (max-width: 1170px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    padding: 0 15px;
+  }
+  main {
+    .container {
+      padding: 0 15px;
+    }
+  }
+  footer {
+    .container {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  main {
+    .pros {
+      &-list {
+        &-item {
+          &:last-child {
+            p {
+              margin: 0;
+            }
+          }
+          p {
+            color: $black;
+            margin: 0 0 10px 0;
+          }
+        }
+      }
+    }
+    .feedback {
+      &-wrapper {
+        display: block;
+      }
+      &-local {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+    .latest-feedback {
+      &-item {
+        width: 49%;
+        &:first-child {
+          margin-right: 2%;
+        }
+      }
+
+    }
+  }
+  footer {
+    .footer-links {
+      .logo {
+        margin-right: 50px;
+      }
+      &-list {
+        width: 280px;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 41px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .title {
+    margin: 15px 0 10px 0;
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .article-title, .article-title a {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  header {
+    background: #fff;
+    z-index: 1;
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $bkg;
+    height: 40px;
+    transition: all 0.3s linear 0.3s;
+    .nav-menu {
+      position: absolute;
+      padding: 0;
+      top: 18px;
+      left: 0;
+      display: block;
+      text-align: center;
+      margin-bottom: 0;
+      /*display: none;*/
+      &-item {
+        font-size: 16px;
+        line-height: 18px;
+        width: 100vw;
+        height: 30px;
+        margin: 0;
+        opacity: 0;
+        transition: all 0.3s linear;
+        a {
+          padding: 5px 50px;
+          border: 0;
+          position: relative;
+          top: 5px;
+          pointer-events: none;
+        }
+      }
+    }
+    &.active {
+      height: 133px;
+      transition: all 0.3s linear;
+      .nav-menu {
+        /*display: block;*/
+
+        &-item {
+          opacity: 1;
+          transition: all 0.3s linear 0.3s;
+          a {
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+    .container {
+      border: 0;
+      width: 100%;
+      align-items: flex-start;
+    }
+    .logo {
+      margin-left: 0;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .burger {
+      top: 11px;
+      right: 15px;
+      position: fixed;
+      width: 20px;
+      height: 15px;
+      padding: 1.5px 0;
+      display: block;
+      cursor: pointer;
+      .line {
+        background-color: $black;
+        width: 100%;
+        height: 3px;
+        margin-bottom: 3px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  main {
+    .container {
+      padding: 0 15px;
+    }
+    .pros {
+      &-list {
+        margin: 0 0 15px 0;
+        padding-right: 0;
+        padding-left: 25px;
+        &-item {
+          p {
+            margin-bottom: 10px;
+          }
+          &:last-child p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .calculator {
+      margin-bottom: 0;
+      &-title {
+        margin-bottom: 10px;
+      }
+      &-block {
+        &-title {
+          margin-top: 15px;
+        }
+        .currency {
+          margin-bottom: 15px;
+        }
+      }
+      .input-wrapper {
+        position: static;
+      }
+      .input-mask {
+        z-index: -1;
+      }
+      input {
+        padding: 9px 10px 8px 10px;
+        font-size: 16px;
+        line-height: 19px;
+        height: 38px;
+        border-radius: 4px;
+      }
+      button[type='submit'] {
+        font-size: 16px;
+        line-height: 17px;
+        height: 38px;
+        padding: 9px 10px;
+      }
+    }
+    .contacts {
+      &-wrapper {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 0;
+      }
+      &-title {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+      &-main-title {
+        margin: 10px 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .mail-list, .jabber-list {
+        padding-left: 40%;
+      }
+      .telegram-list {
+        padding-left: 45%;
+      }
+      .contact {
+        &-list {
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+        &-item {
+          font-size: 10px;
+          line-height: 17px;
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .feedback {
+      &-wrapper {
+        margin-bottom: 0;
+      }
+      &-local {
+        margin-bottom: 15px;
+        &-item {
+          margin-bottom: 15px;
+          &-title {
+            margin-bottom: 10px;
+          }
+        }
+        .pagination {
+          margin-bottom: 0px;
+        }
+      }
+      &-form {
+        padding: 19px 29px;
+        &-title {
+          display: inline-block;
+        }
+        button {
+          border-radius: 4px;
+          height: 38px;
+          font-size: 16px;
+        }
+        textarea {
+          height: 118px;
+        }
+        .top-row {
+          margin-bottom: 15px;
+          .inputs-wrapper {
+            .form-title {
+              margin-top: 0;
+            }
+            &:first-child {
+              margin-right: 15px;
+            }
+            .single-input {
+              input, textarea {
+                padding: 9px 10px 8px 10px;
+                font-size: 16px;
+                line-height: 19px;
+                height: 38px;
+                border-radius: 4px;
+              }
+              input, input#your-name {
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+      &-external {
+        padding: 19px 29px;
+        &-list {
+          margin: 15px 0;
+        }
+        &-thanks {
+          margin-top: 15px;
+        }
+      }
+    }
+    .latest-feedback {
+      margin-bottom: 0;
+      &-title {
+        margin-top: 15px;
+      }
+      &-item {
+        width: 100%;
+        margin-bottom: 15px;
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  footer {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 19px;
+    .container {
+      align-items: flex-start;
+    }
+    .footer-links {
+      display: block;
+      .logo {
+        margin-right: 0;
+        font-size: 16px;
+      }
+      &-list {
+        display: block;
+        padding-left: 0;
+        margin-top: 15px;
+        width: auto;
+      }
+      &-item {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    .calculator {
+      padding: 15px;
+      &-fields {
+        display: block;
+      }
+      &-block {
+        margin: 0 auto;
+        &.give {
+          margin: 0 auto 30px auto;
+        }
+      }
+    }
+    .feedback {
+      &-form {
+        padding: 19px 15px 15px 15px;
+        .top-row {
+          display: block;
+          .inputs-wrapper, .inputs-wrapper:first-child, .inputs-wrapper:last-child {
+            margin: 0 auto;
+            width: 236px;
+            box-sizing: border-box;
+          }
+          .inputs-wrapper {
+            textarea {
+              height: 114px;
+            }
+          }
+        }
+        button {
+          width: 236px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+    .contacts {
+      .mail-list, .jabber-list, .telegram-list {
+        display: inline-block;
+        padding-left: 25px;
+        margin: 0 auto;
+        position: relative;
+        left: calc(50% - 71px);
+      }
+      .telegram-list {
+        left: calc(50% - 50px);
+      }
+    }
+  }
+}

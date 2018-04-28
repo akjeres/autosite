@@ -1,5 +1,54 @@
 @import "variables";
 
 header {
-
+  .container {
+    border-bottom: 1px solid $bkg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 15px;
+  }
+  .logo {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: $blue;
+    margin-left: -15px;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-item {
+      margin-right: 9px;
+      border: 0;
+      &:last-child {
+        margin-right: -15px;
+      }
+      a {
+        border: 2px solid transparent;
+        @include link($black);
+        padding: 9px 38px;
+        box-sizing: border-box;
+      }
+      &.active {
+        font-weight: bold;
+        a {
+          border-radius: 100px;
+          border-color: $blue;
+        }
+      }
+    }
+  }
+  .logo, .nav-menu-item {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }

@@ -10,16 +10,22 @@
 </head>
 <body>
 <header>
-	<section class="content_wrapper">
-		<div class="container">
-			<a class="logo" href="index.html">autosite.com</a>
-			<ul class="nav-menu">
-				<li class="nav-menu-item"><a href="index.html">Обмен</a></li>
-				<li class="nav-menu-item active"><a href="feedback.html">Отзывы</a></li>
-				<li class="nav-menu-item"><a href="contacts.html">Контакты</a></li>
-			</ul>
-		</div>
-	</section>
+    <section class="content_wrapper">
+        <div class="container">
+            <a class="logo" href="index.html">autosite.com</a>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="index.html">Обмен</a></li>
+                <li class="nav-menu-item active"><a href="feedback.html">Отзывы</a></li>
+                <li class="nav-menu-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+
+        </div>
+    </section>
 </header>
 <main>
 	<section class="content_wrapper">
@@ -111,12 +117,41 @@
                             </p>
                         </div>
                         <ul class="pagination">
-                            <li class="pagination-navigation left"> </li>
+                            <li class="pagination-navigation left">
+                                <div class="top-part"></div>
+                                <div class="bottom-part"></div>
+                            </li>
                             <li class="pagination-page">1</li>
                             <li class="pagination-page active">2</li>
                             <li class="pagination-page">3</li>
-                            <li class="pagination-navigation right"> </li>
+                            <li class="pagination-navigation right">
+                                <div class="top-part"></div>
+                                <div class="bottom-part"></div>
+                            </li>
                         </ul>
+                        <div class="form-wrapper">
+                            <label for="feedback-form" class="feedback-form-title title">Опубликовать отзыв</label>
+                            <form class="feedback-form" id="feedback-form" method="post" action="">
+                                <div class="top-row">
+                                    <div class="inputs-wrapper">
+                                        <div class="single-input">
+                                            <label for="your-name" class="form-title">Ваше имя:</label>
+                                            <input type="text" id="your-name" required>
+                                        </div>
+                                        <div class="single-input">
+                                            <label for="your-email" class="form-title">Ваше имя:</label>
+                                            <input type="email" id="your-email" required>
+                                        </div>
+                                    </div>
+                                    <div class="inputs-wrapper">
+                                        <label for="feedback-form-textarea" class="form-title">Сообщение:</label>
+                                        <textarea rows="3" maxlength="500" id="feedback-form-textarea" class="feedback-form-textarea"></textarea>
+                                    </div>
+                                </div>
+                                <!--<input type="submit" class="form-submit left" value="Опубликовать">-->
+                                <button type="submit" class="form-submit center">Опубликовать</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="feedback-external">
                         <h4 class="feedback-external-title article-title">
@@ -133,67 +168,48 @@
                         </p>
                     </div>
                 </div>
-                <label for="feedback-form" class="feedback-form-title title">Опубликовать отзыв</label>
-                <form class="feedback-form" id="feedback-form" method="post" action="">
-                    <div class="inputs-wrapper">
-                        <div class="single-input">
-                            <label for="your-name" class="form-title">Ваше имя:</label>
-                            <input type="text" id="your-name">
-                        </div>
-                        <div class="single-input">
-                            <label for="your-name" class="form-title">Ваше имя:</label>
-                            <input type="text" id="your-name">
-                        </div>
-                    </div>
-                    <div class="inputs-wrapper">
-                        <label for="feedback-form-textarea" class="form-title">Сообщение:</label>
-                        <textarea rows="3" maxlength="500" id="feedback-form-textarea"></textarea>
-                    </div>
-                    <input type="submit" class="form-submit left" value="Опубликовать">
-                </form>
             </article>
 
-			<article class="latest-feedback">
-				<h3 class="latest-feedback-title article-title">
-					<a href="feedback.html">Последние отзывы</a>
-				</h3>
-				<div class="latest-feedback-wrapper">
-					<div class="latest-feedback-item">
-							<span class="latest-feedback-item-title">
-								<span class="name">Андрей</span>&nbsp;<span class="date">13.04.2018</span>
-								</h4>
-								<p class="latest-feedback-item-description">
-								Очень хороший обменник,деньги приходят в кротчайшие сроки и процент маленький! Удобно,быстро и легко!!!
-							</p>
-					</div>
-					<div class="latest-feedback-item">
-							<span class="latest-feedback-item-title">
-								<span class="name">Андрей</span>&nbsp;<span class="date">13.04.2018</span>
-								</h4>
-								<p class="latest-feedback-item-description">
-								Очень хороший обменник,деньги приходят в кротчайшие сроки и процент маленький! Удобно,быстро и легко!!!
-							</p>
-					</div>
-				</div>
-			</article>
+            <article class="latest-feedback">
+                <h3 class="latest-feedback-title article-title">
+                    <a href="feedback.html">Последние отзывы</a>
+                </h3>
+                <div class="latest-feedback-wrapper">
+                    <div class="latest-feedback-item feedback-item">
+                        <h4 class="latest-feedback-item-title feedback-title">
+                            <span class="name">Андрей</span>&nbsp;<span class="date">13.04.2018</span>
+                        </h4>
+                        <p class="latest-feedback-item-description feedback-description">
+                            Очень хороший обменник,деньги приходят в кротчайшие сроки и процент маленький! Удобно,быстро и легко!!!
+                        </p>
+                    </div>
+                    <div class="latest-feedback-item feedback-item">
+                        <h4 class="latest-feedback-item-title feedback-title">
+                            <span class="name">Андрей</span>&nbsp;<span class="date">13.04.2018</span>
+                        </h4>
+                        <p class="latest-feedback-item-description feedback-description">
+                            Очень хороший обменник,деньги приходят в кротчайшие сроки и процент маленький! Удобно,быстро и легко!!!
+                        </p>
+                    </div>
+                </div>
+            </article>
 		</div>
 	</section>
 </main>
 <footer>
-	<section class="content_wrapper">
-		<div class="container">
-			<div class="footer-links">
-				<a class="logo" href="index.html">autosite.com</a>
-				<ul class="footer-links-list">
-					<li class="footer-links-item"><a href="index.html">Обмен</a></li>
-					<li class="footer-links-item"><a href="feedback.html">Отзывы</a></li>
-					<li class="footer-links-item"><a href="rules.html">Правила обмена</a></li>
-					<li class="footer-links-item"><a href="contscts.html">Контакты</a></li>
-				</ul>
-			</div>
-			<a class="email" href="mailto:autosite@gmail.com">autosite@gmail.com</a>
-		</div>
-	</section>
+    <section class="content_wrapper">
+        <div class="container">
+            <div class="footer-links">
+                <a class="logo" href="index.html">autosite.com</a>
+                <ul class="footer-links-list">
+                    <li class="footer-links-item"><a href="index.html">Обмен</a></li>
+                    <li class="footer-links-item"><a href="feedback.html">Отзывы</a></li>
+                    <li class="footer-links-item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <a class="email" href="mailto:autosite@gmail.com">autosite@gmail.com</a>
+        </div>
+    </section>
 </footer>
 <script src="data/js/script.js"></script>
 </body>

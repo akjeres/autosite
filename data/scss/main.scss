@@ -1,5 +1,381 @@
 @import "variables";
 
 main {
+  display: inline-block;
+  width: 100%;
+  min-height: calc(100vh - 167px);
+  .container {
+    padding: 0;
+  }
+  .pros {
+    &-list {
+      color: $blue;
+      padding-right: 28.5%;
+      margin-bottom: 63px;
+      &-item {
+        &:last-child {
+          p {
+            margin: 0;
+          }
+        }
+        p {
+          color: $black;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+  .calculator {
+    background: $bkg;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 40px 25px;
+    max-width: 750px;
+    margin: 0 auto 66px auto;
+    &-title {
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+    &-fields {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    &-block {
+      width: 236px;
+      margin: auto;
+      &-title {
+        margin: 37px 0 15px 0;
+      }
+      .currency {
+        width: 35px;
+        height: 35px;
+        background: center center url('../img/currencies.png') no-repeat;
+        background-size: 200%;
+        margin-bottom: 30px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+      &.give {
+        margin-right: 15px;
+        .currency {
+          background-position: 0 50%;
+        }
+      }
+      &.take {
+        .currency {
+          background-position: 100% 50%;
+        }
+      }
+    }
+    .input-wrapper {
+      position: relative;
+    }
+    .input-mask {
+      position: absolute;
+      width: 37px;
+      height: 37px;
+      background: #fff;
+      right: 1px;
+      top: 1px;
+      border-radius: 4px;
+    }
+    input {
+      width: 236px;
+      box-sizing: border-box;
+      font-size: 18px;
+      line-height: 21px;
+      color: $black;
+      @include placeholder($placeholder);
+      padding: 9px 0 8px 10px;
+      box-sizing: border-box;
+      outline: 0;
+      border-radius: 4px;
+      box-shadow: none;
+      &:focus, &:active {
+        box-shadow: 0 0 3px lighten($blue, 10%);
+      }
+      border: 1px solid $blue;
+    }
 
+    button[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      padding: 11px 9px 7px 9px;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: #fff;
+      background: $blue;
+      border: 0;
+      width: 236px;
+      border-radius: 4px;
+      height: 40px;
+      &:hover {
+        background: darken($blue, 5%);
+      }
+      &:focus {
+        background: darken($blue, 5%);
+        box-shadow: 0 0 3px lighten($blue, 10%);
+      }
+      &:active {
+        background: darken($blue, 10%);
+        box-shadow: 0 0 3px lighten($blue, 10%);
+      }
+    }
+  }
+  .contacts {
+    &-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &-main-title {
+      text-align: center;
+    }
+    &-wrapper {
+      background: $bkg;
+      border-radius: 10px;
+      padding: 27px 42px 42px 42px;
+      width: 570px;
+      margin: 0 auto 66px auto;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    .mail-list, .jabber-list {
+      padding-left: 165px;
+    }
+    .telegram-list {
+      padding-left: 210px;
+    }
+    .contact{
+      &-list {
+        color: $blue;
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+      &-item a {
+        font-size: 16px;
+        line-height: 19px;
+        @include link($black);
+      }
+    }
+  }
+  .feedback {
+    &-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-bottom: 66px;
+    }
+    &-local {
+      flex: 2.25;
+      margin-right: 30px;
+      &-item-description {
+        margin: 0;
+        font-style: italic;
+        color: $comments;
+      }
+      .pagination {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 66px auto;
+        width: 135px;
+        display: flex;
+        justify-content: space-between;
+        &-navigation {
+          position: relative;
+          width: 15px;
+          cursor: pointer;
+          .top-part, .bottom-part {
+            width: 11px;
+            height: 2px;
+            background: $black;
+            position: absolute;
+            cursor: pointer;
+          }
+          &.left {
+            margin-right: 20px;
+            .top-part {
+              top: 4px;
+              left: 0px;
+              position: absolute;
+              transform: rotate(-45deg);
+            }
+            .bottom-part {
+              top: 10px;
+              left: 0;
+              transform: rotate(45deg);
+            }
+          }
+          &.right {
+            margin-left: 20px;
+            .top-part {
+              top: 4px;
+              right: 0px;
+              position: absolute;
+              transform: rotate(45deg);
+            }
+            .bottom-part {
+              top: 10px;
+              right: 0;
+              transform: rotate(-45deg);
+            }
+          }
+          &:hover {
+            .top-part, .bottom-part {
+              background: darken($black, 5%);
+            }
+          }
+          &:active {
+            .top-part, .bottom-part {
+              background: darken($black, 10%);
+            }
+          }
+        }
+        &-page {
+          cursor: pointer;
+          &.active {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    &-item {
+      background: $bkg;
+      display: inline-block;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      padding: 19px 29px;
+    }
+    &-title {
+      margin: 0 0 15px 0;
+    }
+    &-form {
+      background: $bkg;
+      border-radius: 10px;
+      padding: 30px;
+      font-weight: 700;
+      input, textarea {
+        outline: none;
+        &:focus, &:active {
+          box-shadow: 0 0 3px lighten($blue, 10%);
+        }
+      }
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 22px;
+        .inputs-wrapper {
+          #your-name {
+            margin-bottom: 10px;
+          }
+          &:first-child {
+            width: 250px;
+            flex-shrink: 0;
+            margin-right: 30px;
+          }
+          &:last-child {
+            width: 100%;
+          }
+          label {
+            display: block;
+            margin: 10px 0;
+          }
+          .single-input input, textarea{
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid $blue;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 10px 10px 9px 10px;
+          }
+        }
+      }
+      &-textarea {
+        resize: none;
+        height: 130px;
+      }
+      button {
+        width: 250px;
+        padding: 11px 10px 8px 10px;
+        border: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        outline: 0;
+        cursor: pointer;
+        color: white;
+        background: $blue;
+        height: 40px;
+        &:hover {
+          background: darken($blue, 5%);
+        }
+        &:focus {
+          background: darken($blue, 5%);
+          box-shadow: 0 0 3px lighten($blue, 10%);
+        }
+        &:active {
+          background: darken($blue, 10%);
+          box-shadow: 0 0 3px lighten($blue, 10%);
+        }
+      }
+    }
+    &-external {
+      flex: 1.15;
+      background: $bkg;
+      height: 100%;
+      padding: 30px;
+      border-radius: 10px;
+      &-title {
+        margin-top: 0;
+      }
+      &-list {
+        list-style: none;
+        padding: 0;
+      }
+      &-item {
+        margin-bottom: 10px;
+        a {
+          @include link($blue);
+        }
+      }
+      &-thanks {
+        margin: 20px 0 0 0  ;
+      }
+    }
+  }
+  .latest-feedback {
+    max-width: 955px;
+    margin: 0 auto 15px auto;
+    &-title {
+      text-align: center;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &-item {
+      background: $bkg;
+      width: 455px;
+      box-sizing: border-box;
+      padding: 19px 29px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .feedback-title {
+      font-weight: 700;
+      margin: 0 0 10px 0;
+    }
+    .feedback-description {
+      margin: 0;
+      font-style: italic;
+      color: $comments;
+    }
+  }
 }

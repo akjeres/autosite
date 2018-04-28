@@ -1,0 +1,31 @@
+$blue: #44E0EA;
+$black: #333333;
+$footerBkg: #2A2D2B;
+$bkg: #F8F8F8;
+$placeholder: #D9D9D9;
+$comments: #757575;
+
+@mixin link($color) {
+  color: $color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: darken($color, 5%);
+  }
+  &:active {
+    text-decoration: underline;
+    color: darken($color, 10%);
+  }
+  &:visited {
+    text-decoration: none;
+    color: darken($color, 7.5%);
+  }
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {color:$color;}
+  &::-moz-placeholder          {color:$color;}
+  &:-moz-placeholder           {color:$color;}
+  &:-ms-input-placeholder      {color:$color;}
+}
