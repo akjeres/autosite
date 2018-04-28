@@ -14,7 +14,7 @@ header {
   .nav-menu {
     position: absolute;
     padding: 0;
-    top: 18px;
+    top: 30px;
     left: 0;
     display: block;
     text-align: center;
@@ -80,7 +80,7 @@ header {
     }
   }
   &.active {
-    height: 133px;
+    height: 143px;
     transition: all 0.3s linear;
     .nav-menu {
       //display: block;
