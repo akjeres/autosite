@@ -1,0 +1,51 @@
+@import "variables";
+
+main {
+  .calculator {
+    padding: 15px;
+    &-fields {
+      display: block;
+    }
+    &-block {
+      margin: 0 auto;
+      &.give {
+        margin: 0 auto 30px auto;
+      }
+    }
+  }
+  .feedback {
+    &-form {
+      padding: 19px 15px 15px 15px;
+      .top-row {
+        display: block;
+        .inputs-wrapper, .inputs-wrapper:first-child, .inputs-wrapper:last-child {
+          margin: 0 auto;
+          width: 236px;
+          box-sizing: border-box;
+        }
+        .inputs-wrapper {
+          textarea {
+            height: 114px;
+          }
+        }
+      }
+      button {
+        width: 236px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  .contacts {
+    .mail-list, .jabber-list, .telegram-list {
+      display: inline-block;
+      padding-left: 25px;
+      margin: 0 auto;
+      position: relative;
+      left: calc(50% - 71px);
+    }
+    .telegram-list {
+      left: calc(50% - 50px);
+    }
+  }
+}

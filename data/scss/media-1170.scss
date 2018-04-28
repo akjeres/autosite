@@ -1,0 +1,8 @@
+@import "variables";
+
+.container {
+  width: 100%;
+}
+header, main .container, footer .container {
+  padding: 0 15px;
+}

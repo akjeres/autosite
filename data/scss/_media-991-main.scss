@@ -1,0 +1,38 @@
+@import "variables";
+
+main {
+  .pros {
+    &-list {
+      &-item {
+        &:last-child {
+          p {
+            margin: 0;
+          }
+        }
+        p {
+          color: $black;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+  .feedback {
+    &-wrapper {
+      display: block;
+    }
+    &-local {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .latest-feedback {
+    &-item {
+      width: 49%;
+      &:first-child {
+        margin-right: 2%;
+      }
+    }
+
+  }
+}

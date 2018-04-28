@@ -1,0 +1,167 @@
+@import "variables";
+
+main {
+  .container {
+    padding: 0 15px;
+  }
+  .pros {
+    &-list {
+      margin: 0 0 15px 0;
+      padding-right: 0;
+      padding-left: 25px;
+      &-item {
+        p {
+          margin-bottom: 10px;
+        }
+        &:last-child p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .calculator {
+    margin-bottom: 0;
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-block {
+      &-title {
+        margin-top: 15px;
+      }
+      .currency {
+        margin-bottom: 15px;
+      }
+    }
+    .input-wrapper {
+      position: static;
+    }
+    .input-mask {
+      z-index: -1;
+    }
+    input {
+      padding: 9px 10px 8px 10px;
+      font-size: 16px;
+      line-height: 19px;
+      height: 38px;
+      border-radius: 4px;
+    }
+    button[type='submit'] {
+      font-size: 16px;
+      line-height: 17px;
+      height: 38px;
+      padding: 9px 10px;
+    }
+  }
+  .contacts {
+    &-wrapper {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 0;
+    }
+    &-title {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    &-main-title {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    .mail-list, .jabber-list {
+      padding-left: 40%;
+    }
+    .telegram-list {
+      padding-left: 45%;
+    }
+    .contact {
+      &-list {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+      &-item {
+        font-size: 10px;
+        line-height: 17px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .feedback {
+    &-wrapper {
+      margin-bottom: 0;
+    }
+    &-local {
+      margin-bottom: 15px;
+      &-item {
+        margin-bottom: 15px;
+        &-title {
+          margin-bottom: 10px;
+        }
+      }
+      .pagination {
+        margin-bottom: 0px;
+      }
+    }
+    &-form {
+      padding: 19px 29px;
+      &-title {
+        display: inline-block;
+      }
+      button {
+        border-radius: 4px;
+        height: 38px;
+        font-size: 16px;
+      }
+      textarea {
+        height: 118px;
+      }
+      .top-row {
+        margin-bottom: 15px;
+        .inputs-wrapper {
+          .form-title {
+            margin-top: 0;
+          }
+          &:first-child {
+            margin-right: 15px;
+          }
+          .single-input {
+            input, textarea {
+              padding: 9px 10px 8px 10px;
+              font-size: 16px;
+              line-height: 19px;
+              height: 38px;
+              border-radius: 4px;
+            }
+            input, input#your-name {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+    &-external {
+      padding: 19px 29px;
+      &-list {
+        margin: 15px 0;
+      }
+      &-thanks {
+        margin-top: 15px;
+      }
+    }
+  }
+  .latest-feedback {
+    margin-bottom: 0;
+    &-title {
+      margin-top: 15px;
+    }
+    &-item {
+      width: 100%;
+      margin-bottom: 15px;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

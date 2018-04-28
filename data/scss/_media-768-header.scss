@@ -1,0 +1,84 @@
+@import "variables";
+
+header {
+  background: #fff;
+  z-index: 1;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid $bkg;
+  height: 40px;
+  transition: all 0.3s linear 0.3s;
+  .nav-menu {
+    position: absolute;
+    padding: 0;
+    top: 18px;
+    left: 0;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+    //display: none;
+    &-item {
+      font-size: 16px;
+      line-height: 18px;
+      width: 100vw;
+      height: 30px;
+      margin: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+      a {
+        padding: 5px 50px;
+        border: 0;
+        position: relative;
+        top: 5px;
+        pointer-events: none;
+      }
+    }
+  }
+  &.active {
+    height: 133px;
+    transition: all 0.3s linear;
+    .nav-menu {
+      //display: block;
+
+      &-item {
+        opacity: 1;
+        transition: all 0.3s linear 0.3s;
+        a {
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+  .container {
+    border: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .logo {
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .burger {
+    top: 11px;
+    right: 15px;
+    position: fixed;
+    width: 20px;
+    height: 15px;
+    padding: 1.5px 0;
+    display: block;
+    cursor: pointer;
+    .line {
+      background-color: $black;
+      width: 100%;
+      height: 3px;
+      margin-bottom: 3px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

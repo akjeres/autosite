@@ -1,0 +1,21 @@
+@import "variables";
+
+body {
+  padding-top: 41px;
+  font-size: 14px;
+  line-height: 17px;
+}
+.title {
+  margin: 15px 0 10px 0;
+  font-size: 21px;
+  line-height: 25px;
+}
+.article-title, .article-title a {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@import "_media-768-header";
+@import "_media-768-main";
+@import "_media-768-footer";
