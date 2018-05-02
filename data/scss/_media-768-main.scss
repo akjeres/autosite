@@ -153,6 +153,18 @@ main {
       }
     }
   }
+  .rules {
+    &-block {
+      padding: 19px 29px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 30px;
+      }
+      &-list {
+        margin-top: 10px;
+      }
+    }
+  }
   .latest-feedback {
     margin-bottom: 0;
     &-title {

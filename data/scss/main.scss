@@ -356,6 +356,39 @@ main {
       }
     }
   }
+  .rules {
+    &-block {
+      padding: 40px 29px;
+      background-color: $bkg;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      &-title {
+        margin-top: 0px;
+      }
+      &-list {
+        color: $blue;
+        margin: 15px auto 0 auto;
+        &.sub {
+          list-style: none;
+          margin: 10px auto 15px auto;
+          li {
+            color: $black;
+          }
+        }
+      }
+      &-item p {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: $black;
+      }
+      &-item:last-child p {
+        margin-bottom: 0px;
+      }
+      &-paragraph {
+        margin: 15px 0;
+      }
+    }
+  }
   .latest-feedback {
     max-width: 955px;
     margin: 0 auto 15px auto;
