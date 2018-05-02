@@ -48,7 +48,7 @@ main {
       width: 236px;
       margin: auto;
       &-title {
-        margin: 37px 0 15px 0;
+        margin: 0px 0 15px 0;
       }
       .currency {
         width: 35px;
@@ -61,10 +61,12 @@ main {
         border-radius: 50%;
       }
       &.give {
-        margin-right: 15px;
         .currency {
           background-position: 0 50%;
         }
+      }
+      &.give, &.wallet {
+        margin-right: 15px;
       }
       &.take {
         .currency {
